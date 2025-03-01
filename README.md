@@ -29,10 +29,10 @@ https://forms.gle/n7VbXjVJHaKyc1uW8
 By submitting, you agree to Google's privacy policy.
 
 ## KyraAV and Windows 96 v2sp2
-> ![WARNING]
+> [!WARNING]
 > KyraAV is NOT designed to run on Windows 96 v2. Bugs or glitches may occur, and we are not responsible for them.
 
-> ![WARNING]
+> [!WARNING]
 > KyraAV will NOT start on bootup and must be manually started by moving `kyra.js` to `C:/system/local/bin` and running `kyra.js` in the terminal on each boot.
 
 KyraAV is not designed to run on Windows 96 v2sp2. However, I've created a compatibility layer that should allow some v3 apps to work fine on v2sp2 ([themirrazz/w96-v2v3-compat](https://github.com/themirrazz/w96-v2v3-compat/tree/main)). KyraAV seems to work okay here; however the installer will NOT run. Please use the file at `/src/manual-install.js` to install KyraAV on Windows 96 v2.
