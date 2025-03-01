@@ -16,7 +16,7 @@ Off by default, but you can enable it to only allow apps you want to be able to 
 
 ## Changelog
 ### KyraAV v1.0.1 Preview Log
-* A UI dashboard will let you change settings and uninstall KyraAV
+* The framework* for a UI dashboard will let you change settings and uninstall KyraAV
 * Web Shield and Behavior Shield will get new updates
 
 ### KyraAV v1.0.0
