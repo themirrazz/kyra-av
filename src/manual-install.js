@@ -1,5 +1,6 @@
 //!wrt
 (async function () {
+var data = await fetch('https://raw.githubusercontent.com/themirrazz/kyra-av/refs/heads/main/upd-skr/latest/package.txt?nocache=4fyjdbjfenjk8x8kq', {mode: 'cors'});
 var zing = await data.text();
 var fxr = JSON.parse(zing);
 if(!await w96.FS.exists('C:/local/KyraAV')) {
