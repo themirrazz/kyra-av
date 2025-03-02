@@ -1,6 +1,8 @@
 # KyraAV
 KyraAV is an antivirus for Windows 96 v3 and above. It works pretty well and features automatic updates, self-defense, secure config, a virus shield, and a web shield. Plus, an optional Camera Shield! More features coming in the future. The appearance is designed to kinda resemble Avast! antivirus so it's familiar for people who have Avast!.
 
+![image](rm/img/KYRA_AV_HERO.png)
+
 ## Features
 ### Virus Shield
 The Virus Shield scans viruses against all file read attempts. If a file is known malware, or contains a known malware sample, it blocks the app. It also tells you where the file read request came from - if the app is the in `apps.json` list, it'll show you the name of the file from there (only works on apps that are in the `C:/system/local/bin` folder).
@@ -15,11 +17,13 @@ Behavior Shield blocks known malware or known malware samples from being run dir
 Off by default, but you can enable it to only allow apps you want to be able to use your webcam. Webcam Shield doesn't apply to iframes.
 
 ## Changelog
-### KyraAV v1.0.1 Preview Log
-* The framework* for a UI dashboard will let you change settings and uninstall KyraAV
-* Web Shield and Behavior Shield will get new updates
+### KyraAV v1.1
+* Behavior Shield now blocks malicious code pasted into eval
+* Framework for a UI is now in place (a UI is in the works)
+* Web Shield can now block malicious websites in `<iframe>` tags
+* New AT&T scams added to the list of deceptive sites.
 
-### KyraAV v1.0.0
+### KyraAV v1.0
 * Initial release!!
 
 ## Reporting Malware
