@@ -1,0 +1,58 @@
+[
+    {
+        "url": "*://testsafebrowsing.appspot.com/s/phishing.html",
+        "type": "phishing_wbs"
+    },
+    {
+        "url": "*://testsafebrowsing.appspot.com/s/malware.html",
+        "type": "malware_wbs"
+    },
+    {
+        "url": "*://testsafebrowsing.appspot.com/s/software.html",
+        "type": "malware_wbs"
+    },
+    {
+        "domain": "attserver231.weebly.com",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "v3r1fy.de",
+        "type": "phishing_wbs"
+    },
+    {
+        "url": "*://skinbn.com/ams7pcpbn589.html",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "clarotv.github.io",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "howhow.cl",
+        "type": "adware_wbs"
+    },
+    {
+        "domain": "wwtwea.pagen.io",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "homemts2025.weebly.com",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "olufennatoor.com",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "webapp-ambienteseguro.site",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "currrently27282812.weebly.com",
+        "type": "phishing_wbs"
+    },
+    {
+        "domain": "att-currently-2-28-2025.weeblysite.com",
+        "type": "phishing_wbs"
+    }
+]
