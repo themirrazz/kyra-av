@@ -17,6 +17,10 @@ Behavior Shield blocks known malware or known malware samples from being run dir
 Off by default, but you can enable it to only allow apps you want to be able to use your webcam. Webcam Shield doesn't apply to iframes.
 
 ## Changelog
+### KyraAV v1.3
+* Patched minor bugs in currently unused code (future-proofing)
+* Introduced experimental UI dashboard (NOT INCLUDED!!!)
+
 ### KyraAV v1.2
 * Bug fixes
 
