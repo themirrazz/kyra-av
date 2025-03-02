@@ -1,0 +1,5 @@
+We've included the EICAR Antivirus Test File (eicar.com.txt). This program triggers KyraAV (among other antivirus) but is NOT malicious. You can open it in Textpad (or your favorite TXT editor/viewer) to trigger KyraAV.
+
+If KyraAV doesn't trigger when you open the file, or triggers even when Virus Shield is off, please open an issue on our GitHub.
+
+You can use the app 'webcam-shield-tester' to test webcam shield.
