@@ -9,6 +9,7 @@ return await (async function anonymous () {
         } = env;
         var tree = {};
         var keys = Object.keys(window.Document.prototype);
+        keys.push('location');
         // enumerate through window.document
         keys.forEach(function (key) {
             if(key != 'createElement') {
@@ -43,10 +44,15 @@ return await (async function anonymous () {
     const navigator = (function (env) {
         var {
             hooks, getUserMedia, webcamShield,
-            webcamShieldExceptions, src, define
+            webcamShieldExceptions, src, define,
+            FixFilePaths
         } = env;
         var tree = {};
         var keys = Object.keys(window.Navigator.prototype);
+        // Web Honorifics API - it's nyan-standard
+        if(typeof window.navigator.honorifics === 'boolean') {
+            keys.push('honorifics');
+        }
         // enumerate through window.navigator
         keys.forEach(function (key) {
             if(key != 'mediaDevices') {
@@ -80,9 +86,7 @@ return await (async function anonymous () {
                         'SecurityError'
                     );
                 } else if(!(webcamShieldExceptions().includes(
-                    w96.FSUtil.fixPath(
-                        w96.FSUtil.normalizeDriveLetter(src)
-                    )
+                    FixFilePaths(src)
                 ))) {
                     throw new DOMException(
                         "Webcam access was blocked by KyraAV",
@@ -216,12 +220,13 @@ return await (async function anonymous () {
         };
         var kk = [
             'get', 'hash', 'getFromCache', 'exists',
-            'cp', 'cpdir', 'rm', 'rmdir', 'writestr', 'writebin',
+            'cpfile', 'cpdir', 'rm', 'rmdir', 'writestr', 'writebin',
             'touch', 'toBlob', 'toURL', 'mvdir', 'mvfile',
             'rename', 'stat', 'mount', 'mounts', 'isFile',
             'name', 'nextLetter', 'umount', 'walk', 'filetype',
             'list', 'isEmpty', 'uncache', 'readdir', 'readBinChunk',
-            'readStrChunk'
+            'readStrChunk', 'mkdir', 'get', 'getFromCache',
+            'cache', 'uncache'
         ];
         kk.forEach(function (key) {
             if(typeof env.wapi.FS[key] === 'function') {
@@ -235,7 +240,9 @@ return await (async function anonymous () {
         return tree;
     })(this.raw);
 
-    if(this.raw.trusted) {
+    console.log(this.raw);
+
+    if(this.raw.trustedApp) {
         var RawAccess = this.raw;
     }
 
