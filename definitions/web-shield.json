@@ -1,15 +1,15 @@
 [
     {
-        "url": "*://testsafebrowsing.appspot.com/s/phishing.html",
+        "url": "https://kyra-av.vercel.app/wbs/malware.html",
+        "type": "malware_wbs"
+    },
+    {
+        "url": "https://kyra-av.vercel.app/wbs/phishing.html",
         "type": "phishing_wbs"
     },
     {
-        "url": "*://testsafebrowsing.appspot.com/s/malware.html",
-        "type": "malware_wbs"
-    },
-    {
-        "url": "*://testsafebrowsing.appspot.com/s/software.html",
-        "type": "malware_wbs"
+        "url": "https://kyra-av.vercel.app/wbs/adware.html",
+        "type": "adware_wbs"
     },
     {
         "domain": "attserver231.weebly.com",
