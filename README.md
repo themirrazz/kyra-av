@@ -47,7 +47,7 @@ By submitting, you agree to Google's privacy policy.
 ## Cross-Platform Compatibility
 ### KyraAV and Windows 96 v3+
 > [!NOTE]
-> KyraAV is stable on Windows 96 v3. Any problems or glitches that are a bug in KyraAV itself.
+> KyraAV is stable on Windows 96 v3. Any problems or glitches that arise are a bug in KyraAV itself.
 
 All versions of KyraAV have 100% compatibility with Windows 96 v3 or newer.
 
