@@ -17,6 +17,11 @@ Behavior Shield blocks known malware or known malware samples from being run dir
 Off by default, but you can enable it to only allow apps you want to be able to use your webcam. Webcam Shield doesn't apply to iframes.
 
 ## Changelog
+### KyraAV v1.3.1
+* Patched a minor bug with the WRT hook that broke apps, including Monaco
+* Experimental support for Windows 96 v2sp2
+* Removed reliance on WRT for running on v2sp1 (not supported)
+
 ### KyraAV v1.3
 * Patched minor bugs in currently unused code (future-proofing)
 * Introduced experimental UI dashboard (NOT INCLUDED!!!)
@@ -39,13 +44,35 @@ https://forms.gle/n7VbXjVJHaKyc1uW8
 
 By submitting, you agree to Google's privacy policy.
 
-## KyraAV and Windows 96 v2sp2
+## Cross-Platform Compatibility
+### KyraAV and Windows 96 v3+
+> [!NOTE]
+> KyraAV is stable on Windows 96 v3. Any problems or glitches that are a bug in KyraAV itself.
+
+All versions of KyraAV have 100% compatibility with Windows 96 v3 or newer.
+
+### KyraAV and Windows 96 v2sp2
 > [!WARNING]
-> KyraAV is NOT designed to run on Windows 96 v2. Bugs or glitches may occur, and we are not responsible for them.
+> We are experimenting with support for running KyraAV on v2sp2. Please report all issues to this GitHub repository.
 
-> [!WARNING]
-> KyraAV will NOT start on bootup and must be manually started by moving `kyra.js` to `C:/system/local/bin` and running `kyra.js` in the terminal on each boot.
+As of v1.3.1, KyraAV *officially* supports running on Windows 96 v2sp2. This support is experimental, so please report any bugs to this GitHub repository.
 
-KyraAV is not designed to run on Windows 96 v2sp2. However, I've created a compatibility layer that should allow some v3 apps to work fine on v2sp2 ([themirrazz/w96-v2v3-compat](https://github.com/themirrazz/w96-v2v3-compat/tree/main)). KyraAV seems to work okay here; however the installer will NOT run. Please use the file at `/src/manual-install.js` to install KyraAV on Windows 96 v2.
+### KyraAV and Windows 96 v2sp1
+> [!CAUTION]
+> KyraAV is NOT designed to run on Windows 96 v2sp1. Bugs or glitches may occur, and we are not responsible for them.
 
-THIS SUPPORT IS EXPERIMENTAL AND SOME THINGS WILL BREAK. KYRA MAY NOT PROPERLY PROTECT AGAINST V2 APPS BECAUSE THEY DO NOT USE WRT. USE AT YOUR OWN RISK.
+> [!CAUTION]
+> Windows 96 v2sp1 does NOT support the WRT Runtime, which is required for KyraAV to run properly. Some advanced features - like webcam exceptions and the dashboard - will be completely unavailable.
+
+Even though KyraAV will work on v2sp1 without crashing, this is by design (antivirus systems should not crash). Due to the abscense of the WRT (Windows 96 RunTime), some features will be completely unavailable on Windows 96 v2sp1. We do NOT officially support v2sp1, and won't be able to help with issues that cause from using it their.
+
+Things known to work:
+* Overall virus protection and Web Shield
+* Camera Shield
+
+Things known not to work (properly or at all):
+* Adding exceptions to Camera Shield
+* Using the dashboard
+* Detecting the app that tried to read a malicious file
+* Detecting the app that tried to make a malicious web request
+* Detecting the app that opened a malicious <iframe>
